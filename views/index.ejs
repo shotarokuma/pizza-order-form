@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pizza Order Form</title>
+
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body style="color:<%= color%>">
+
+  <h1>Order Pizza!</h1>
+
+  <form class="order-form" action="/orders" method="post">
+    <fieldset>
+      <legend>Size</legend>
+      <label for="extra-large">Extra-large</label>
+      <input type="radio" name="size" value="extra-large" id="extra-large">
+      <label for="large">Large</label>
+      <input type="radio" name="size" value="large" id="large">
+      <label for="medium">Medium</label>
+      <input type="radio" name="size" value="medium" id="medium">
+      <label for="small">Small</label>
+      <input type="radio" name="size" value="small" id="small">
+    </fieldset>
+    <label for="gluten_free">Gluten free crust?</label>
+    <input type="checkbox" id="gluten_free" name="gluten_free" value="true">
+    <fieldset>
+      <legend>Toppings (select between 3 and 5)</legend>
+      <label for="tomato sause">Tomato sause</label>
+      <input type="checkbox" id="tomato sause" name="toppings" value="tomato sause">
+      <label for="cheese">Cheese</label>
+      <input type="checkbox" id="cheese" name="toppings" value="cheese">
+      <label for="pepperoni">Pepperoni</label>
+      <input type="checkbox" id="pepperoni" name="toppings" value="pepperoni">
+      <label for="green peppers">Green peppers</label>
+      <input type="checkbox" id="green peppers" name="toppings" value="green peppers">
+      <label for="pineapple">Pineapple</label>
+      <input type="checkbox" id="pineapple" name="toppings" value="pineapple">
+      <label for="mushrooms">Mushrooms</label>
+      <input type="checkbox" id="mushrooms" name="toppings" value="mushrooms">
+      <label for="olives">Olives</label>
+      <input type="checkbox" id="olives" name="topping" value="olives">
+    </fieldset>
+    <label for="name">Your name:</label>
+    <input type="text" id="name" name="name">
+    <label for="email">Your email:</label>
+    <input type="text" id="email" name="email">
+    <label for="date">Delivery Date (yyyy-mm-dd):</label>
+    <input type="text" id="date" name="date">
+    <label for="rating">Rate your experience 1 (terreble) to 5 (excellent):</label>
+    <input type="text" id="rating" name="rating">
+    <button>Submit!</button>
+    <button>reset form</button>
+  </form>
+
+  <form class="color-form" action="/" action="GET">
+    <label for="color">Color of Page: </label>
+    <input type="text" name="color" id="color">
+    <button>Submit color</button>
+  </form>
+</body>
+
+</html>
